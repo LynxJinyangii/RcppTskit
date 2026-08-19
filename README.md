@@ -1,6 +1,5 @@
 # <img src="RcppTskit/man/figures/logo.png" align="left" height="60" alt="" style="vertical-align: middle; margin-right: 12px; margin-bottom: 5px;" /> <span style="vertical-align: middle;">RcppTskit: R access to the tskit C API</span>
 
----
 
 ## Overview
 
