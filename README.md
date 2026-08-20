@@ -1,4 +1,4 @@
-# `RcppTskit`: `R` access to the `tskit C` API
+# `RcppTskit`: `R` access to the `tskit C` API <img src="RcppTskit/man/figures/logo.png" align="right" height="139" alt="RcppTskit logo" />
 
 ## Overview
 
@@ -11,11 +11,11 @@ described in Wong et al. (2024)
 <[doi:10.1093/genetics/iyae100](https://doi.org/10.1093/genetics/iyae100)>,
 while `tskit` project is described in Jeffrey et al. (2026)
 <[doi:10.48550/arXiv.2602.09649](https://doi.org/10.48550/arXiv.2602.09649)>.
-See https://tskit.dev for project news, documentation, and tutorials.
+See <https://tskit.dev> for project news, documentation, and tutorials.
 `Tskit` provides `Python`, `C`, and `Rust` application programming interfaces (APIs).
 The `Python` API can be called from `R` via the `reticulate` `R` package to
 seamlessly load and analyse a tree sequence, as described at
-https://tskit.dev/tutorials/RcppTskit.html.
+<https://tskit.dev/tutorials/RcppTskit.html>.
 `RcppTskit` provides `R` access to the `tskit C` API for use cases where the
 `reticulate` option is not optimal.
 For example, for high-performance and low-level work with tree sequences.
@@ -54,21 +54,23 @@ Code quality: [![Codecov test coverage](https://codecov.io/gh/HighlanderLab/Rcpp
 
 <!-- badges: end -->
 
-## Contents
+## Repository structure
 
-  * `extern` - Git submodule for `tskit` and instructions on
+* `RcppTskit` - The `R` package.
+
+* `extern` - Git submodule for `tskit` and instructions on
     obtaining the latest version and copying the `tskit C` code into
     `RcppTskit` directory.
     `extern` is saved outside of the `RcppTskit` directory
     because `R CMD CHECK` complains otherwise (even with `.Rbuildignore`).
 
-  * `RcppTskit` - `R` package `RcppTskit`.
+* `logo` - Logo sources, variants, and reproducible generation script.
 
 ## License
 
-  * See `extern/LICENSE` for `tskit`.
+* See `extern/LICENSE` for `tskit`.
 
-  * See `RcppTskit/LICENSE*` for `RcppTskit`.
+* See `RcppTskit/LICENSE*` for `RcppTskit`.
 
 ## Installation
 
@@ -104,9 +106,9 @@ Note that you will have to compile the `C/C++` code and vignette,
 so you will require the complete build toolchain,
 including compilers, other `R` packages, and `quarto`.
 See
-https://r-pkgs.org/setup.html#setup-tools for introduction to this topic,
-https://cran.r-project.org/bin/windows/Rtools for Windows tools, and
-https://mac.r-project.org/tools for macOS tools.
+<https://r-pkgs.org/setup.html#setup-tools> for introduction to this topic,
+<https://cran.r-project.org/bin/windows/Rtools> for Windows tools, and
+<https://mac.r-project.org/tools> for macOS tools.
 
 ```
 # install.packages("remotes") # If you don't have it already
