@@ -1,0 +1,22 @@
+
+IM_MAGICK := magick
+
+TARGETS = combined4_hexsticker.png combined5_hexsticker.png g4_hexsticker.png g5_hexsticker.png
+
+all: $(TARGETS)
+
+
+%_square.png: %.png
+	$(IM_MAGICK) $< -background white -gravity center -resize 3000x3000 \
+	-extent 4000x3650 -gravity south -splice 0x350 $@
+
+%_hexsticker.png: %_square.png
+	@echo "Generating high-resolution sticker..."
+	Rscript -e 'library(hexSticker); sticker("$<", package="", \
+		s_width=1.0, s_x=1, s_y=1, \
+		h_fill="white", h_color="#045167", h_size=1.5, \
+		dpi=600, \
+		filename="$@")'
+
+clean:
+	rm -f *_hexsticker.png *_square.png
